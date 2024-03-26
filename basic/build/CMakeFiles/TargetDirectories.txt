@@ -1,4 +1,0 @@
-C:/Users/woshiren/cpp-lab/basic/build/CMakeFiles/matrix.dir
-C:/Users/woshiren/cpp-lab/basic/build/CMakeFiles/main.dir
-C:/Users/woshiren/cpp-lab/basic/build/CMakeFiles/edit_cache.dir
-C:/Users/woshiren/cpp-lab/basic/build/CMakeFiles/rebuild_cache.dir
