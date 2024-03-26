@@ -1,0 +1,14 @@
+# ninja log v5
+1	1363	7331368515303913	CMakeFiles/matrix.dir/src/matrix.cpp.obj	79bdb062d7efa5ee
+1372	2264	7331368524359598	libmatrix.a	624b74b145254f3a
+22	334	7331371076370158	CMakeFiles/main.dir/src/main.cpp.obj	a9ae210872ad4cc9
+17	352	7331371076536441	CMakeFiles/matrix.dir/src/matrix.cpp.obj	79bdb062d7efa5ee
+352	437	7331371077391130	libmatrix.a	624b74b145254f3a
+437	735	7331371080294981	main.exe	9a2eac7927f384c3
+3	324	7331372388085899	CMakeFiles/matrix.dir/src/matrix.cpp.obj	79bdb062d7efa5ee
+30	371	7331373112463622	CMakeFiles/main.dir/src/main.cpp.obj	a9ae210872ad4cc9
+26	374	7331373112518620	CMakeFiles/matrix.dir/src/matrix.cpp.obj	79bdb062d7efa5ee
+374	426	7331373113028599	libmatrix.a	624b74b145254f3a
+426	748	7331373116172360	main.exe	9a2eac7927f384c3
+3	318	7331374915721266	CMakeFiles/main.dir/src/main.cpp.obj	a9ae210872ad4cc9
+319	629	7331374918743329	main.exe	9a2eac7927f384c3

@@ -1,0 +1,14 @@
+[
+{
+  "directory": "D:/cpp-lab/basic/build",
+  "command": "D:\\w64devkit\\bin\\g++.exe -ID:/cpp-lab/basic/include -g -o CMakeFiles\\matrix.dir\\src\\matrix.cpp.obj -c D:\\cpp-lab\\basic\\src\\matrix.cpp",
+  "file": "D:\\cpp-lab\\basic\\src\\matrix.cpp",
+  "output": "CMakeFiles\\matrix.dir\\src\\matrix.cpp.obj"
+},
+{
+  "directory": "D:/cpp-lab/basic/build",
+  "command": "D:\\w64devkit\\bin\\g++.exe -ID:/cpp-lab/basic/include -g -o CMakeFiles\\main.dir\\src\\main.cpp.obj -c D:\\cpp-lab\\basic\\src\\main.cpp",
+  "file": "D:\\cpp-lab\\basic\\src\\main.cpp",
+  "output": "CMakeFiles\\main.dir\\src\\main.cpp.obj"
+}
+]
