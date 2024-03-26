@@ -1,4 +1,4 @@
-# Install script for directory: D:/cpp-lab/basic
+# Install script for directory: C:/Users/woshiren/cpp-lab/basic
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,7 +34,7 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "D:/w64devkit/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/objdump.exe")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/cpp-lab/basic/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/woshiren/cpp-lab/basic/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

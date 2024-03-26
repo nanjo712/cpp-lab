@@ -1,4 +1,4 @@
-set(CMAKE_RC_COMPILER "D:/w64devkit/bin/windres.exe")
+set(CMAKE_RC_COMPILER "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/windres.exe")
 set(CMAKE_RC_COMPILER_ARG1 "")
 set(CMAKE_RC_COMPILER_LOADED 1)
 set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)

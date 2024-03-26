@@ -1,4 +1,4 @@
-set(CMAKE_CXX_COMPILER "D:/w64devkit/bin/g++.exe")
+set(CMAKE_CXX_COMPILER "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/g++.exe")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_COMPILER_VERSION "13.2.0")
@@ -22,11 +22,11 @@ set(CMAKE_CXX_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "D:/w64devkit/bin/ar.exe")
-set(CMAKE_CXX_COMPILER_AR "D:/w64devkit/bin/gcc-ar.exe")
-set(CMAKE_RANLIB "D:/w64devkit/bin/ranlib.exe")
-set(CMAKE_CXX_COMPILER_RANLIB "D:/w64devkit/bin/gcc-ranlib.exe")
-set(CMAKE_LINKER "D:/w64devkit/bin/ld.exe")
+set(CMAKE_AR "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/ar.exe")
+set(CMAKE_CXX_COMPILER_AR "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/gcc-ar.exe")
+set(CMAKE_RANLIB "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/ranlib.exe")
+set(CMAKE_CXX_COMPILER_RANLIB "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/gcc-ranlib.exe")
+set(CMAKE_LINKER "C:/Users/woshiren/Documents/w64devkit-1.21.0/w64devkit/bin/ld.exe")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
 set(CMAKE_CXX_COMPILER_LINKER "")
