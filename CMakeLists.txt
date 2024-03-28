@@ -6,4 +6,4 @@ set(USE_BASIC ON)
 
 if (USE_BASIC)
     add_subdirectory(basic)
-endif
+endif()
