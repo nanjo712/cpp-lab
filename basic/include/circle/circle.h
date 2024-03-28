@@ -11,9 +11,9 @@ private:
 public:
     Circle(double r, Point c=Point());
     Circle(double r, double x, double y);
-    ~Circle()=default;
+    ~Circle();
 
     static bool isIntersect(const Circle& a,const Circle& b);
-}
+};
 
 #endif /* CIRCLE_H_ */

@@ -38,6 +38,10 @@ Matrix::~Matrix()
 
 const Matrix Matrix::operator+(const Matrix& m)
 {
+    if (rows != m.rows || cols != m.cols)
+    {
+        throw std::invalid_argument("Matrix dimensions do not match.");
+    }
     Matrix result(rows, cols);
     for (int i = 0; i < rows; i++)
     {
@@ -51,6 +55,10 @@ const Matrix Matrix::operator+(const Matrix& m)
 
 const Matrix Matrix::operator-(const Matrix& m)
 {
+    if (rows != m.rows || cols != m.cols)
+    {
+        throw std::invalid_argument("Matrix dimensions do not match.");
+    }
     Matrix result(rows, cols);
     for (int i = 0; i < rows; i++)
     {

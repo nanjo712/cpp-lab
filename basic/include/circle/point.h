@@ -7,7 +7,7 @@ private:
     double x,y;
 public:
     Point(double x=0,double y=0);
-    ~Point() = default;
+    ~Point();
     static double calcDistance(const Point &x,const Point &y);
 };
 
