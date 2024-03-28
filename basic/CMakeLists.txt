@@ -28,3 +28,5 @@ target_include_directories(circle_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/inclu
 add_executable(shape_no_virtual_main src/shape_no_virtual_main.cpp)
 target_link_libraries(shape_no_virtual_main shape_no_virtual)
 target_include_directories(shape_no_virtual_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+add_executable(guess_number src/guess_number.cpp)
