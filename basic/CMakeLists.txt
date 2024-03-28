@@ -7,11 +7,30 @@ set(CMAKE_CXX_STANDARD 17)
 add_library(matrix src/matrix/matrix.cpp)
 target_include_directories(matrix PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(circle src/circle/circle.cpp src/circle/point.cpp)
+add_library(
+    circle 
+    src/circle/circle.cpp 
+    src/circle/point.cpp
+)
 target_include_directories(circle PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-add_library(shape_no_virtual src/shape_no_virtual/shape.cpp src/shape_no_virtual/circle.cpp src/shape_no_virtual/rectangle.cpp src/shape_no_virtual/square.cpp)
+add_library(
+    shape_no_virtual 
+    src/shape_no_virtual/shape.cpp 
+    src/shape_no_virtual/circle.cpp 
+    src/shape_no_virtual/rectangle.cpp 
+    src/shape_no_virtual/square.cpp
+)
 target_include_directories(shape_no_virtual PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+add_library(
+    shape
+    src/shape/shape.cpp
+    src/shape/circle.cpp
+    src/shape/rectangle.cpp
+    src/shape/square.cpp
+)
+target_include_directories(shape PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(basic_main src/basic_main.cpp)
 target_link_libraries(basic_main matrix)
@@ -30,3 +49,11 @@ target_link_libraries(shape_no_virtual_main shape_no_virtual)
 target_include_directories(shape_no_virtual_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
 
 add_executable(guess_number src/guess_number.cpp)
+
+add_executable(shape_main src/shape_main.cpp)
+target_link_libraries(shape_main shape)
+target_include_directories(shape_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)
+
+add_executable(point_main src/point_main.cpp)
+target_link_libraries(point_main circle)
+target_include_directories(point_main PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/include)

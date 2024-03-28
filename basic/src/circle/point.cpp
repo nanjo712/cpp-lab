@@ -18,3 +18,34 @@ double Point::calcDistance(const Point& a, const Point& b)
     double disY=a.y-b.y;
     return hypot(disX,disY);
 }
+
+Point& Point::operator++()
+{
+    ++x;
+    return *this;
+}
+
+Point& Point::operator++(int)
+{
+    ++y;
+    return *this;
+}
+
+Point& Point::operator--()
+{
+    --x;
+    return *this;
+}
+
+Point& Point::operator--(int)
+{
+    --y;
+    return *this;
+}
+
+std::ostream& operator<<(std::ostream& os, const Point& p)
+{
+    os<<"("<<p.x<<","<<p.y<<")";
+    return os;
+}
+

@@ -11,8 +11,7 @@ private:
 public:
     Rectangle(double width, double height);
     virtual ~Rectangle();
-    double area() const;
+    double area() const override;
 };
 
 #endif /* RECTANGLE_H_ */
-
