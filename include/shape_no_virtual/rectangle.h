@@ -8,6 +8,7 @@ class Rectangle : public Shape
 private:
     double width;
     double height;
+
 public:
     Rectangle(double width, double height);
     virtual ~Rectangle();
@@ -15,4 +16,3 @@ public:
 };
 
 #endif /* RECTANGLE_H_ */
-

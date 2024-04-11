@@ -8,6 +8,7 @@ class Circle : public Shape
 private:
     static const double PI;
     double radius;
+
 public:
     Circle(double radius);
     ~Circle();

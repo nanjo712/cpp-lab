@@ -7,22 +7,22 @@ int main()
     std::default_random_engine engine(static_cast<unsigned int>(std::chrono::system_clock::now().time_since_epoch().count()));
     std::uniform_int_distribution<int> distribution(1, 1000);
     int random_number = distribution(engine);
-    std::cout<<"ÉÌÆ·¼Û¸ñÒÑÉú³É£¬·¶Î§Îª[1,1000), Çë²Â²â¼Û¸ñ£º";
-    int guess_number=-1;
-    while (guess_number!=random_number)
+    std::cout << "ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É£ï¿½ï¿½ï¿½Î§Îª[1,1000), ï¿½ï¿½Â²ï¿½Û¸ï¿½";
+    int guess_number = -1;
+    while (guess_number != random_number)
     {
-        std::cin>>guess_number;
-        if (guess_number>random_number)
+        std::cin >> guess_number;
+        if (guess_number > random_number)
         {
-            std::cout<<"²Â´óÁË£¬ÇëÖØÐÂÊäÈë£º";
+            std::cout << "ï¿½Â´ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º";
         }
-        else if (guess_number<random_number)
+        else if (guess_number < random_number)
         {
-            std::cout<<"²ÂÐ¡ÁË£¬ÇëÖØÐÂÊäÈë£º";
+            std::cout << "ï¿½ï¿½Ð¡ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£º";
         }
         else
         {
-            std::cout<<"¹§Ï²Äã£¬²Â¶ÔÁË£¡"<<std::endl;
+            std::cout << "ï¿½ï¿½Ï²ï¿½ã£¬ï¿½Â¶ï¿½ï¿½Ë£ï¿½" << std::endl;
         }
     }
     return 0;

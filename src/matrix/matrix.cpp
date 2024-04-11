@@ -1,17 +1,17 @@
 #include "matrix/matrix.h"
 
-Matrix::Matrix(int rows, int cols): rows(rows), cols(cols)
+Matrix::Matrix(int rows, int cols) : rows(rows), cols(cols)
 {
-    data = new double*[rows];
+    data = new double *[rows];
     for (int i = 0; i < rows; i++)
     {
         data[i] = new double[cols];
     }
 }
 
-Matrix::Matrix(const Matrix& m): rows(m.rows), cols(m.cols)
+Matrix::Matrix(const Matrix &m) : rows(m.rows), cols(m.cols)
 {
-    data = new double*[rows];
+    data = new double *[rows];
     for (int i = 0; i < rows; i++)
     {
         data[i] = new double[cols];
@@ -22,7 +22,7 @@ Matrix::Matrix(const Matrix& m): rows(m.rows), cols(m.cols)
     }
 }
 
-Matrix::Matrix(Matrix&& m): rows(m.rows), cols(m.cols), data(m.data)
+Matrix::Matrix(Matrix &&m) : rows(m.rows), cols(m.cols), data(m.data)
 {
     m.data = nullptr;
 }
@@ -36,7 +36,7 @@ Matrix::~Matrix()
     delete[] data;
 }
 
-const Matrix Matrix::operator+(const Matrix& m)
+const Matrix Matrix::operator+(const Matrix &m)
 {
     if (rows != m.rows || cols != m.cols)
     {
@@ -53,7 +53,7 @@ const Matrix Matrix::operator+(const Matrix& m)
     return result;
 }
 
-const Matrix Matrix::operator-(const Matrix& m)
+const Matrix Matrix::operator-(const Matrix &m)
 {
     if (rows != m.rows || cols != m.cols)
     {
@@ -70,7 +70,7 @@ const Matrix Matrix::operator-(const Matrix& m)
     return result;
 }
 
-Matrix& Matrix::operator=(const Matrix& m)
+Matrix &Matrix::operator=(const Matrix &m)
 {
     if (this == &m)
     {
@@ -83,7 +83,7 @@ Matrix& Matrix::operator=(const Matrix& m)
     delete[] data;
     rows = m.rows;
     cols = m.cols;
-    data = new double*[rows];
+    data = new double *[rows];
     for (int i = 0; i < rows; i++)
     {
         data[i] = new double[cols];
@@ -95,7 +95,7 @@ Matrix& Matrix::operator=(const Matrix& m)
     return *this;
 }
 
-std::ostream& operator<<(std::ostream& os, const Matrix& m)
+std::ostream &operator<<(std::ostream &os, const Matrix &m)
 {
     for (int i = 0; i < m.rows; i++)
     {
@@ -108,7 +108,7 @@ std::ostream& operator<<(std::ostream& os, const Matrix& m)
     return os;
 }
 
-std::istream& operator>>(std::istream& is, Matrix& m)
+std::istream &operator>>(std::istream &is, Matrix &m)
 {
     for (int i = 0; i < m.rows; i++)
     {
