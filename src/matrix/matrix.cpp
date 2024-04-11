@@ -36,6 +36,28 @@ Matrix::~Matrix()
     delete[] data;
 }
 
+const Matrix Matrix::add(const Matrix &m)
+{
+    Matrix tmp(rows, cols);
+    if (rows != m.rows || cols != m.cols)
+    {
+        throw std::invalid_argument("Matrix dimensions do not match.");
+    }
+    tmp = *this + m;
+    return tmp;
+}
+
+const Matrix Matrix::subtract(const Matrix &m)
+{
+    Matrix tmp(rows, cols);
+    if (rows != m.rows || cols != m.cols)
+    {
+        throw std::invalid_argument("Matrix dimensions do not match.");
+    }
+    tmp = *this - m;
+    return tmp;
+}
+
 const Matrix Matrix::operator+(const Matrix &m)
 {
     if (rows != m.rows || cols != m.cols)
@@ -93,6 +115,16 @@ Matrix &Matrix::operator=(const Matrix &m)
         }
     }
     return *this;
+}
+
+void Matrix::init(std::istream &is)
+{
+    is >> *this;
+}
+
+void Matrix::output(std::ostream &os)
+{
+    os << *this;
 }
 
 std::ostream &operator<<(std::ostream &os, const Matrix &m)
