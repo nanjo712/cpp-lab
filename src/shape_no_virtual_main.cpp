@@ -4,7 +4,7 @@
 #include <iostream>
 
 template <typename T>
-void printArea(T &shape)
+void printArea(const T &shape)
 {
     std::cout << "Area: " << shape.area() << std::endl;
 }

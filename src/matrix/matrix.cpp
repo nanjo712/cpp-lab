@@ -103,6 +103,7 @@ Matrix &Matrix::operator=(const Matrix &m)
         delete[] data[i];
     }
     delete[] data;
+
     rows = m.rows;
     cols = m.cols;
     data = new double *[rows];

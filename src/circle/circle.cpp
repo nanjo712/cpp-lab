@@ -1,7 +1,7 @@
 #include "circle/circle.h"
 #include <iostream>
 
-Circle::Circle(double r, Point c) : radius(r), center(c)
+Circle::Circle(double r, const Point &c) : radius(r), center(c)
 {
     std::cout << "Constructor of Circle" << std::endl;
 }
