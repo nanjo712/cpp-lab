@@ -11,18 +11,26 @@ int main()
     int guess_number = -1;
     while (guess_number != random_number)
     {
-        std::cin >> guess_number;
-        if (guess_number > random_number)
+        if (std::cin >> guess_number)
         {
-            std::cout << "猜大了，请重新输入：";
-        }
-        else if (guess_number < random_number)
-        {
-            std::cout << "猜小了，请重新输入：";
+            if (guess_number > random_number)
+            {
+                std::cout << "猜大了，请重新输入：";
+            }
+            else if (guess_number < random_number)
+            {
+                std::cout << "猜小了，请重新输入：";
+            }
+            else
+            {
+                std::cout << "恭喜你，猜对了！" << std::endl;
+            }
         }
         else
         {
-            std::cout << "恭喜你，猜对了！" << std::endl;
+            std::cout << "输入无效，请重新输入：";
+            std::cin.clear();
+            std::cin.ignore(1024, '\n');
         }
     }
     return 0;

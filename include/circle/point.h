@@ -6,18 +6,20 @@
 class Point
 {
 private:
-    double x,y;
+    double x, y;
+
 public:
-    Point(double x=0,double y=0);
+    Point(double x = 0, double y = 0);
     ~Point();
-    static double calcDistance(const Point &x,const Point &y);
+    static double calcDistance(const Point &x, const Point &y);
 
-    Point& operator++();
-    Point& operator--();
-    Point& operator++(int);
-    Point& operator--(int);
+    Point &operator++();
+    Point &operator--();
 
-    friend std::ostream& operator<<(std::ostream& os,const Point& p);
+    const Point operator++(int);
+    const Point operator--(int);
+
+    friend std::ostream &operator<<(std::ostream &os, const Point &p);
 };
 
 #endif /* POINT_H_ */

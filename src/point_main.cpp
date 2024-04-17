@@ -3,8 +3,9 @@
 
 int main()
 {
-    std::cout << "Input the coordinates of the point" << std::endl;
     double x, y;
+
+    std::cout << "Input the coordinates of the point:" << std::endl;
     Point *p;
     if (std::cin >> x >> y)
     {

@@ -21,26 +21,32 @@ double Point::calcDistance(const Point &a, const Point &b)
 
 Point &Point::operator++()
 {
-    ++x;
-    return *this;
-}
-
-Point &Point::operator++(int)
-{
-    ++y;
+    x++;
+    y++;
     return *this;
 }
 
 Point &Point::operator--()
 {
-    --x;
+    x--;
+    y--;
     return *this;
 }
 
-Point &Point::operator--(int)
+const Point Point::operator++(int)
 {
-    --y;
-    return *this;
+    Point temp = *this;
+    x++;
+    y++;
+    return temp;
+}
+
+const Point Point::operator--(int)
+{
+    Point temp = *this;
+    x--;
+    y--;
+    return temp;
 }
 
 std::ostream &operator<<(std::ostream &os, const Point &p)

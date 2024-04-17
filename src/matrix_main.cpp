@@ -55,7 +55,6 @@ int main()
         pA3 = new Matrix(*pA1 + *pA2);
         std::cout << "The sum of the two matrices is: \n"
                   << *pA3;
-        delete pA3;
 
         *pA3 = *pA1 - *pA2;
         std::cout << "The difference of the two matrices is: \n"
