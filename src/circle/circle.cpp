@@ -18,5 +18,5 @@ Circle::~Circle()
 
 bool Circle::isIntersect(const Circle &a, const Circle &b)
 {
-    return Point::calcDistance(a.center, b.center) <= a.radius + b.radius;
+    return Point::calcDistance(a.center, b.center) <= a.radius + b.radius && Point::calcDistance(a.center, b.center) >= std::abs(a.radius - b.radius);
 }
