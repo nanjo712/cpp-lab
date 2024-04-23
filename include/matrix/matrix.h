@@ -7,7 +7,7 @@ class Matrix
 {
 private:
     int rows, cols;
-    double **data;
+    int **data;
 
 public:
     Matrix(int rows, int cols);

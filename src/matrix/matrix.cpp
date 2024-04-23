@@ -2,19 +2,19 @@
 
 Matrix::Matrix(int rows, int cols) : rows(rows), cols(cols)
 {
-    data = new double *[rows];
+    data = new int *[rows];
     for (int i = 0; i < rows; i++)
     {
-        data[i] = new double[cols];
+        data[i] = new int[cols];
     }
 }
 
 Matrix::Matrix(const Matrix &m) : rows(m.rows), cols(m.cols)
 {
-    data = new double *[rows];
+    data = new int *[rows];
     for (int i = 0; i < rows; i++)
     {
-        data[i] = new double[cols];
+        data[i] = new int[cols];
         for (int j = 0; j < cols; j++)
         {
             data[i][j] = m.data[i][j];
@@ -106,10 +106,10 @@ Matrix &Matrix::operator=(const Matrix &m)
 
     rows = m.rows;
     cols = m.cols;
-    data = new double *[rows];
+    data = new int *[rows];
     for (int i = 0; i < rows; i++)
     {
-        data[i] = new double[cols];
+        data[i] = new int[cols];
         for (int j = 0; j < cols; j++)
         {
             data[i][j] = m.data[i][j];
