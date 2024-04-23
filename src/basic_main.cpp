@@ -13,7 +13,7 @@ int main()
     std::cout << "Enter the second matrix 4x5: \n";
     std::cin >> *A2; // A2->init(std::cin); 这是一种等价的写法
 
-    *A3 = *A1 + *A2; // *A3 = A1->add(*A2);
+    *A3 = *A1 + *A2; // *A3 = A1->add(*A2); 这是一种等价的写法
     std::cout << "The sum of the two matrices is: \n";
     std::cout << *A3; // A3->output(std::cout); 这是一种等价的写法
 

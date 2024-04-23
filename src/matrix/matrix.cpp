@@ -24,11 +24,13 @@ Matrix::Matrix(const Matrix &m) : rows(m.rows), cols(m.cols)
 
 Matrix::Matrix(Matrix &&m) : rows(m.rows), cols(m.cols), data(m.data)
 {
+    // 移动语义，避免资源拷贝
     m.data = nullptr;
 }
 
 Matrix::~Matrix()
 {
+    // 释放资源
     for (int i = 0; i < rows; i++)
     {
         delete[] data[i];
@@ -36,34 +38,45 @@ Matrix::~Matrix()
     delete[] data;
 }
 
+// 加法操作的函数接口
 const Matrix Matrix::add(const Matrix &m)
 {
-    Matrix tmp(rows, cols);
+    // 检查矩阵维度是否相同
     if (rows != m.rows || cols != m.cols)
     {
         throw std::invalid_argument("Matrix dimensions do not match.");
     }
+
+    // 计算矩阵和
+    Matrix tmp(rows, cols);
     tmp = *this + m;
     return tmp;
 }
 
+// 减法操作的函数接口
 const Matrix Matrix::subtract(const Matrix &m)
 {
-    Matrix tmp(rows, cols);
+    // 检查矩阵维度是否相同
     if (rows != m.rows || cols != m.cols)
     {
         throw std::invalid_argument("Matrix dimensions do not match.");
     }
+
+    // 计算矩阵差
+    Matrix tmp(rows, cols);
     tmp = *this - m;
     return tmp;
 }
 
 const Matrix Matrix::operator+(const Matrix &m)
 {
+    // 检查矩阵维度是否相同
     if (rows != m.rows || cols != m.cols)
     {
         throw std::invalid_argument("Matrix dimensions do not match.");
     }
+
+    // 计算矩阵和
     Matrix result(rows, cols);
     for (int i = 0; i < rows; i++)
     {
@@ -77,10 +90,13 @@ const Matrix Matrix::operator+(const Matrix &m)
 
 const Matrix Matrix::operator-(const Matrix &m)
 {
+    // 检查矩阵维度是否相同
     if (rows != m.rows || cols != m.cols)
     {
         throw std::invalid_argument("Matrix dimensions do not match.");
     }
+
+    // 计算矩阵差
     Matrix result(rows, cols);
     for (int i = 0; i < rows; i++)
     {
@@ -94,16 +110,20 @@ const Matrix Matrix::operator-(const Matrix &m)
 
 Matrix &Matrix::operator=(const Matrix &m)
 {
+    // 检查自赋值
     if (this == &m)
     {
         return *this;
     }
+
+    // 释放原有资源
     for (int i = 0; i < rows; i++)
     {
         delete[] data[i];
     }
     delete[] data;
 
+    // 分配新资源并复制数据
     rows = m.rows;
     cols = m.cols;
     data = new int *[rows];
@@ -118,16 +138,19 @@ Matrix &Matrix::operator=(const Matrix &m)
     return *this;
 }
 
+// 初始化矩阵，对输入流操作的封装，提供函数接口
 void Matrix::init(std::istream &is)
 {
     is >> *this;
 }
 
+// 初始化矩阵，对输出流操作的封装，提供函数接口
 void Matrix::output(std::ostream &os)
 {
     os << *this;
 }
 
+// 友元函数，重载输出运算符
 std::ostream &operator<<(std::ostream &os, const Matrix &m)
 {
     for (int i = 0; i < m.rows; i++)
@@ -141,6 +164,7 @@ std::ostream &operator<<(std::ostream &os, const Matrix &m)
     return os;
 }
 
+// 友元函数，重载输出运算符
 std::istream &operator>>(std::istream &is, Matrix &m)
 {
     for (int i = 0; i < m.rows; i++)
